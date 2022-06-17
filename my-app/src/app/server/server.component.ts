@@ -8,13 +8,12 @@ import { Component, OnInit } from '@angular/core';
   //behave as Class
   // selector: '.app-server',
   templateUrl: './server.component.html',
-  // styleUrls: ['./server.component.css']
-  styles: [`
-    .online{
-      color: white;
-    }
-    
-  `]
+  styleUrls: ['./server.component.css']
+  // styles: [`
+  //   .online{
+  //     color: white;
+  //   }
+  // `]
 })
 export class ServerComponent implements OnInit {
 
@@ -27,6 +26,7 @@ export class ServerComponent implements OnInit {
    serverCreatedStatus = "Server is not created";
    serverName = "";
    serverCreated = false;
+   servers = ['Server1', 'Server 2'];
   constructor() { 
 
     this.serverStatus = Math.random() > 0.5 ? 'Online': 'Offline';
@@ -43,6 +43,7 @@ export class ServerComponent implements OnInit {
   }
   onCreatedServer(){
     this.serverCreated = true;
+    this.servers.push(this.serverName);
     return this.serverCreatedStatus = 'Server is successfully Created' + "Name is:" +  this.serverName;
   }
   onServerNameUpdated(event: Event){
