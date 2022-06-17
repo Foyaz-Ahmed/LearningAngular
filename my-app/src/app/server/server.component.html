@@ -1,5 +1,5 @@
 <p>{{'Server'}} Id is {{serverId}} which becomes {{serverStatus}}</p>
-<p [ngStyle]="{backgroundColor:getColor()}">Get Server Id by calling Funtion {{getServerId()}}</p>
+<p [ngStyle]="{backgroundColor:getColor()}" [ngClass]="{online: serverStatus === 'Online'}">Get Server Id by calling Funtion {{getServerId()}}</p>
 
 
 <!-- <p>{{buttonDisabled}}</p> -->

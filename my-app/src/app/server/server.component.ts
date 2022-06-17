@@ -8,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
   //behave as Class
   // selector: '.app-server',
   templateUrl: './server.component.html',
-  styleUrls: ['./server.component.css']
+  // styleUrls: ['./server.component.css']
+  styles: [`
+    .online{
+      color: white;
+    }
+    
+  `]
 })
 export class ServerComponent implements OnInit {
 
