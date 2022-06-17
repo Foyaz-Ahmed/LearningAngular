@@ -1,0 +1,21 @@
+<p>{{'Server'}} Id is {{serverId}} which becomes {{serverStatus}}</p>
+<p [ngStyle]="{backgroundColor:getColor()}">Get Server Id by calling Funtion {{getServerId()}}</p>
+
+
+<!-- <p>{{buttonDisabled}}</p> -->
+<!-- property binding by square brackedts -->
+<!-- <p [innerText]="buttonDisabled"></p> -->
+<p [innerText]="serverCreatedStatus"></p>
+
+<!-- Event Binding -->
+<div class="form-group">
+<!-- <input type="text" (input)="onServerNameUpdated($event)"  class="form-control widthofInput"/>
+<br/> -->
+<input type="text" [(ngModel)]="serverName" class="form-control widthofInput"/>
+<button class="btn btn-success" [disabled]="!buttonDisabled" (click)="onCreatedServer()">Click me</button>
+</div>
+<p *ngIf="serverCreated; else noServer"> Server is created Server name is : {{serverName}}</p>
+
+<ng-template #noServer>
+    <p>No server is Created</p>
+</ng-template>
