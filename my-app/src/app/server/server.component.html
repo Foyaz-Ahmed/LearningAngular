@@ -21,7 +21,9 @@
 </ng-template>
 <!-- <app-server *ngFor = "let server of servers"></app-server> -->
 <ul>
-    <li *ngFor = "let server of servers">
+    <li *ngFor = "let server of servers; let i = index"
+     [ngStyle] = "{backgroundColor: i>=4 ? 'blue' : 'purple' }"
+    >
            {{server}} 
     </li>
 </ul>
