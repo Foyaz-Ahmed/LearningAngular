@@ -6,7 +6,7 @@ import { Component, Input, OnInit,InputDecorator } from '@angular/core';
   styleUrls: ['./server-element.component.css']
 })
 export class ServerElementComponent implements OnInit {
-  @Input() element= {
+  @Input('renameElement') element= {
     type: '',
     name:'',
     content:'',
