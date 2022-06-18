@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit,InputDecorator } from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
@@ -6,9 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./server-element.component.css']
 })
 export class ServerElementComponent implements OnInit {
-
-  constructor() { }
-
+  @Input() element= {
+    type: '',
+    name:'',
+    content:'',
+  };
+  constructor(){}
+  
   ngOnInit(): void {
   }
 
