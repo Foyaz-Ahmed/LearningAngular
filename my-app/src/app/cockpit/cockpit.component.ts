@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output,ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-cockpit',
@@ -17,16 +17,18 @@ export class CockpitComponent implements OnInit {
   ngOnInit(): void {
   }
  
-  onAddServer() {
+  onAddServer(inputName:HTMLInputElement) {
     this.serverCreated.emit({
-      serverName:this.newServerName,
+      // serverName:this.newServerName,
+      serverName:inputName.value,
       serverContent:this.newServerContent
     });
   }
 
-  onAddBlueprint() {
+  onAddBlueprint(inputName:HTMLInputElement) {
     this.blueprintCreated.emit({
-      serverName:this.newServerName,
+      //serverName:this.newServerName,
+      serverName:inputName.value,
       serverContent:this.newServerContent
     });
   }
